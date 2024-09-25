@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <style>
+        body {
+            background-color: rgb(211, 121, 136);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: red;
+            font-size: 2.5em;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hearts {
+            font-size: 2em;
+            color: red;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+
+        .input-container {
+            margin: 20px 0;
+        }
+
+        .input-container input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Una Carta de Amor para Ti ❤️</h1>
+        
+        <div class="input-container">
+            <label for="name">Ingresa tu nombre:</label>
+            <input type="text" id="name" placeholder="Tu nombre">
+        </div>
+        
+        <div class="input-container">
+            <label for="password">Ingresa una contraseña:</label>
+            <input type="password" id="password" placeholder="Tu contraseña">
+        </div>
+
+        <button onclick="mostrarCarta()">Abrir Carta</button>
+
+        <div id="carta" class="hidden-content card">
+            <h1>Para ti, mi amor Zarela </h1>
+            <p>Querida <span id="nombre"></span>,</p>
+            <p>
+                No sé cómo empezar a expresar lo mucho que significas para mí. Desde el día en que te conocí, supe que algo increíble
+                estaba a punto de comenzar. Cada momento contigo es un tesoro que guardo con todo mi corazón. 
+                Cada sonrisa, cada mirada, cada palabra que intercambiamos hacen que mi vida sea más brillante, más feliz.
+            </p>
+            <p>
+                Contigo, los días grises se vuelven radiantes. No importa lo que pase, porque sé que tengo a mi lado a la persona más maravillosa. 
+                Tú haces que cada día tenga sentido, y por eso, me siento eternamente agradecido.
+            </p>
+            <p>
+                Te amo no solo por lo que eres, sino por lo que me haces ser cuando estoy contigo. Tú sacas lo mejor de mí, y cada día 
+                me esfuerzo por ser mejor, por ti, por nosotros. Nuestro amor es un viaje, y estoy emocionado por todos los caminos que recorreremos juntos.
+            </p>
+            <p>
+                Prometo estar contigo en cada paso de este viaje, apoyarte, cuidarte y amarte con todo mi ser. No importa cuán difícil sea el camino, 
+                siempre estaré a tu lado. Te amo más de lo que las palabras pueden expresar, y mi amor por ti crece con cada amanecer.
+            </p>
+            <p>
+                Así que, <span id="nombre2"></span>, nunca lo olvides: eres mi todo, y siempre lo serás. Mi corazón late por ti, 
+                y siempre lo hará.
+            </p>
+            <div class="hearts">💖💖💖💖💖💖💖💖💖💖💖</div>
+            <p>Con todo mi amor,</p>
+            <p>Tu [ANTHONY]</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarCarta() {
+            var nombreIngresado = document.getElementById("name").value;
+            var passwordIngresada = document.getElementById("password").value;
+
+            // Mostrar la carta si ambos campos tienen algún valor
+            if (nombreIngresado && passwordIngresada) {
+                document.getElementById("nombre").innerText = nombreIngresado;
+                document.getElementById("nombre2").innerText = nombreIngresado;
+                document.getElementById("carta").style.display = "block";
+            } else {
+                alert("Por favor, ingresa tu nombre y una contraseña.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
